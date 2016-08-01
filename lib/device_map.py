@@ -1198,6 +1198,15 @@ at91sam9x35ek = {'device_type': 'at91sam9x35ek',
                     'lpae': False,
                     'fastboot': False}
 
+at91rm9200ek = {'device_type': 'at91rm9200ek',
+                    'templates': ['generic-arm-dtb-kernel-ci-boot-nfs-template.json'],
+                    'kernel_defconfig_blacklist': [],
+                    'defconfig_blacklist': ['arm-allmodconfig'],
+                    'kernel_blacklist': ['v3'],
+                    'nfs_blacklist': [],
+                    'lpae': False,
+                    'fastboot': False}
+
 at91_sama5d2_xplained = {'device_type': 'at91-sama5d2_xplained',
                     'templates': ['generic-arm-dtb-kernel-ci-boot-template.json'],
                     'kernel_defconfig_blacklist': [],
@@ -1313,6 +1322,7 @@ device_map = {'bcm2835-rpi-b-plus.dtb': [bcm2835_rpi_b_plus],
               'at91sam9261ek.dtb': [sam9261ek],
               'at91sam9x25ek.dtb': [sam9x25ek],
               'at91sam9x35ek.dtb': [at91sam9x35ek],
+              'at91rm9200ek.dtb': [at91rm9200ek],
               'at91-sama5d2_xplained.dtb': [at91_sama5d2_xplained],
               'at91-sama5d4_xplained.dtb': [at91_sama5d4_xplained],
               'at91sam9m10g45ek.dtb': [at91sam9m10g45ek],
